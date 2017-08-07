@@ -1,0 +1,41 @@
+		@font-face {
+	    font-family: lato;
+	    src: url(fonts/Lato2OFL/Lato-Regular.ttf);	
+		}		
+		
+		body {
+	    background-image: url("img/back3.jpg");
+		background-size : 100% auto;
+		font-family:lato;
+		font-size:18px;
+		margin-bottom:8%;
+		}
+		
+		.img-circle {
+	    border-radius: 50%;
+		}
+		
+		#footer{
+	    position:fixed;
+	    height:10%;
+	    bottom:0px;
+	    left:0px;
+	    right:0px;
+	    margin-bottom:4%;
+		}
+
+		.fa {
+		color:#B0B0B0
+		}
+		
+		.fa-envelope:hover {
+		color: black
+		}
+				
+		.fa-linkedin:hover {
+		color: #007bb6;
+		}
+
+		.fa-file-text-o:hover {
+		color: red;	
+		}
