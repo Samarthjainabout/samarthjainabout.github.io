@@ -8,7 +8,7 @@
 <link href="css/speedometer.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-		<script> randomNumber(3); </script>
+		<script> randomNumber(2); </script>
 	<input TYPE=TEXT NAME="ACCOUNT" ID="ACCOUNT" VALUE=""  MAXLENGTH=16 SIZE=16 readonly>
 
 	<br>
@@ -28,9 +28,9 @@
         randomNumber = Math.floor(Math.random() * 10);
         n += randomNumber.toString();
     }
-    return n;
+    return n+40;
 }
 
-document.getElementById("ACCOUNT").value = randomNumber(3);
+document.getElementById("ACCOUNT").value = randomNumber(2);
 </script>
 </html>
