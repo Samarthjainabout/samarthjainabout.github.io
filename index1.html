@@ -18,7 +18,17 @@
 <script type="text/javascript">
 	$("#ACCOUNT").myfunc({divFact:10,eventListenerType:'keyup'});
 	$("#myValues2").myfunc({divFact:30});
-	
-	TYPE=TEXT NAME="ACCOUNT" ID="ACCOUNT" VALUE=""  MAXLENGTH=16 SIZE=16
+	function randomNumber(len) {
+    var randomNumber;
+    var n = '';
+
+    for(var count = 0; count < len; count++) {
+        randomNumber = Math.floor(Math.random() * 10);
+        n += randomNumber.toString();
+    }
+    return n;
+}
+
+document.getElementById("ACCOUNT").value = randomNumber(9);
 </script>
 </html>
