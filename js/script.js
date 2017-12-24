@@ -39,7 +39,7 @@ $(document).ready(function(){
     var x = lessThan(presetHeights,scroll_pos);
     var bgColor = perset[presetHeights[x]];
     if(bgColor) {
-      $("body").css('background',https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/shell.jpg?raw=true);
+      $("body").css('background-image',url("https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/shell.jpg?raw=true"));
     }
   }
 
