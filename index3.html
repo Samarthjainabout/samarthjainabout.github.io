@@ -7,7 +7,7 @@
 	<meta name="robots" content="index,follow" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
 
-	<title> Change Page Background on User Scroll | Tech Stream</title>
+	<title>PHASE90|Making BLDC easy to use</title>
 
 	<meta name="description" content="A stand alone script to Change Page Background on User Scroll, this script can calculate the breakpoints and the background color from the markup making it reusable."/>
 
@@ -37,9 +37,83 @@
 
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="js/script.js"></script>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+ <style> 
+.container{
+    width: 100%;
+ 
+    overflow:hidden;
+    display:block;
+    height: 350px;
+}
+  .container2{
+    width: 100%;
+ 
+    overflow:hidden;
+    display:block;
+ 
+   
+}
+  
+  
+  #video1{
+    margin-left: -10px;
+   margin-right: -10px;
+   margin-top: -100px;
+    margin-bottom: -100px;
+}
+   #video2{
+    margin-left: -10px;
+   margin-right: -10px;
+   margin-top: 0px;
+    margin-bottom: 0px;
+}
+}
+   </style>
 </head>
 
 <body>
+	<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PEOPLE</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WORK</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="#" class="w3-bar-item w3-button">Extras</a>
+        <a href="#" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+	
+	
 	<div class="main-container" id="wide">
 		<div id="top"></div>  	<!-- used to bring users to top -->
 		<header id="main-header">
@@ -48,12 +122,20 @@
 					<div class="row">
 						<div class="column-small-11 center">
 							<div class="row">
-								<div class="column-xsmall-2 center-xsmall padd0 logo">
-									<a href="http://techstream.org">Tech Stream</a>
-								</div>
-								<div class="column-xsmall-10 align-right center-xsmall padd0">
-									<a href="http://techstream.org/Web-Development/Javascript/Change-Page-Background-on-Scroll" class="button">Back To article</a>
-								</div>
+								
+								
+								
+								  <div class="mySlides w3-display-container w3-center">
+      <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Making BLDC control simpler</h3>
+      <p><b>BLDC motors are the future</b></p>   
+    </div>
+    <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/Capturecontroller.PNG?raw=true" style="width:100%">
+   
+  </div>
+  
+  </div>
+							
 							</div>
 						</div>
 					</div>
