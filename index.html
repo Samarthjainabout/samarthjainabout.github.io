@@ -7,6 +7,66 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+ <!--sliding-->
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body { 
+  font-family: 'Open Sans', 'sans-serif';
+  color: #cecece;
+  background: #222;
+  overflow: hidden;
+}
+
+.item-1, 
+.item-2, 
+.item-3 {
+	position: absolute;
+  display: block;
+	top: 2em;
+  
+  width: 60%;
+  
+  font-size: 2em;
+
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { left: -100%; opacity: 0; }
+  8.3%,25% { left: 25%; opacity: 1; }
+  33.33%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { left: -100%; opacity: 0; }
+  41.63%, 58.29% { left: 25%; opacity: 1; }
+  66.66%, 100% { left: 110%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { left: -100%; opacity: 0; }
+  74.96%, 91.62% { left: 25%; opacity: 1; }
+  100% { left: 110%; opacity: 0; }
+}
+ 
+ <!--sliding-->
+ 
+ 
+ 
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
@@ -72,6 +132,16 @@ body {font-family: "Lato", sans-serif}
   <a href="#" class="w3-bar-item w3-button w3-padding-large">MERCH</a>
 </div>
 
+   <!-- The sliding Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+   <p class="item-1">This is your last chance. After this, there is no turning back.</p>
+
+<p class="item-2">You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe.</p>
+
+<p class="item-3">You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.</p>
+  
+  </div>
+ 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
