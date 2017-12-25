@@ -20,6 +20,10 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
 	
+	<style>
+.mySlides {display:none;}
+</style>
+	
 	 <style> 
 .container{
     width: 100%;
@@ -124,7 +128,7 @@ body {font-family: "Lato", sans-serif}
 				<!--add-->
 				<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <!-- Automatic Slideshow Images -->
+ 
  
   <!-- Automatic Slideshow Images -->
  
@@ -133,10 +137,11 @@ body {font-family: "Lato", sans-serif}
       <h3>Making BLDC control simpler</h3>
       <p><b>BLDC motors are the future</b></p>   
     </div>
-    <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/Capturecontroller.PNG?raw=true" style="width:100%">
-   <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/top.PNG?raw=true" style="width:100%">
-   
-  </div>
+  <div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/top.PNG?raw=true" style="width:100%">
+  <img class="mySlides" src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/sidegaruda.PNG?raw=true" style="width:100%">
+  <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+</div>
   
   </div>
   
@@ -180,6 +185,7 @@ body {font-family: "Lato", sans-serif}
 	
 <script>
 // Automatic Slideshow - change image every 4 seconds
+
 var myIndex = 0;
 carousel();
 
@@ -192,7 +198,7 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000);    
+    setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
