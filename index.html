@@ -1,577 +1,149 @@
 <!DOCTYPE html>
-<html>
-<title>PHASE90:Making BLDC easy to use</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
-	
-<style>
-	
-body {
-  font-family: Arial;
-  padding: 25px;
-  background-color: #f5f5f5;
-  color: #808080;
-  	text-align: center;	
-}
-
-/*-=-=-=-=-=-=-=-=-=-=-=- */
-/* Column Grids */
-/*-=-=-=-=-=-=-=-=-=-=-=- */
-
-.col_half { width: 49%; }
-.col_third { width: 32%; }
-.col_fourth { width: 23.5%; }
-.col_fifth { width: 18.4%; }
-.col_sixth { width: 15%; }
-.col_three_fourth { width: 74.5%;}
-.col_twothird{ width: 66%;}
-.col_half,
-.col_third,
-.col_twothird,
-.col_fourth,
-.col_three_fourth,
-.col_fifth{
-	position: relative;
-	display:inline;
-	display: inline-block;
-	float: left;
-	margin-right: 2%;
-	margin-bottom: 20px;
-}
-.end { margin-right: 0 !important; }
-/* Column Grids End */
-
-.wrapper { width: 980px; margin: 30px auto; position: relative;}
-.counter { background-color: #ffffff; padding: 20px 0; border-radius: 5px;}
-.count-title { font-size: 40px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
-.count-text { font-size: 13px; font-weight: normal;  margin-top: 10px; margin-bottom: 0; text-align: center; }
-.fa-2x { margin: 0 auto; float: none; display: table; color: #4ad1e5; }
-	</style>
-<style>
-	
-	
-	
-	
-	p.serif {
-    font-family: "Times New Roman", Times, serif;
-}
-	
-	
-.container3 {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.top-left {
-	 position: absolute;
-    top: 10%;
-    left: 50%;
-	transform: translate(-50%, -50%);
-  
-}
-
-.bottom-left {
-   position: relative;
-    top: 80%;
-    left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-</style>
-	
-	
-	<style>
-	
- <!--sliding-->
- @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
-
-body { 
-  font-family: 'Open Sans', 'sans-serif';
-  color: #cecece;
-  background: #222;
-  overflow: hidden;
-}
-
-.item-1, 
-.item-2, 
-.item-3 {
-	position: absolute;
-  display: block;
-	top: 2em;
-  
-  width: 100%;
-  
-  font-size: 2em;
-
-	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-}
-
-.item-1{
-	animation-name: anim-1;
-}
-
-.item-2{
-	animation-name: anim-2;
-}
-
-.item-3{
-	animation-name: anim-3;
-}
-
-@keyframes anim-1 {
-	0%, 15% { left: -100%; opacity: 0; }
-  15%,35% { left: -30%; opacity: 1; }
-  35%,35% { left: -10%; opacity: 0; }
-}
-
-@keyframes anim-2 {
-	0%, 15% { left: -100%; opacity: 0; }
-  15%,35% { left: 0%; opacity: 1; }
-  35%,35% { left: 10%; opacity: 0; }
-}
-
-@keyframes anim-3 {
-	0%, 66.66% { left: -100%; opacity: 0; }
-  74.96%, 91.62% { left: 25%; opacity: 1; }
-  100% { left: 110%; opacity: 0; }
-}
- 
- <!--sliding-->
- 
- 
- 
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
- <style> 
-.container{
-    width: 100%;
- 
-    overflow:hidden;
-    display:block;
-    height: 350px;
-}
-  .container2{
-    width: 100%;
- 
-    overflow:hidden;
-    display:block;
- 
-   
-}
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.5.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.5.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
-  #video1{
-    margin-left: -10px;
-   margin-right: -10px;
-   margin-top: -100px;
-    margin-bottom: -100px;
-}
-   #video2{
-    margin-left: -10px;
-   margin-right: -10px;
-   margin-top: 0px;
-    margin-bottom: 0px;
-}
-}
-   </style>
+  
+</head>
 <body>
+<section class="cid-qF72YGwwFP mbr-fullscreen mbr-parallax-background" id="header2-k">
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-red w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT US</a>
-    <a href="#work" class="w3-bar-item w3-button w3-padding-large w3-hide-small">WORK</a>
-    <a href="#design" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Design</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#details" class="w3-bar-item w3-button">Technical Details</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
-        <a href="https://samarthjainabout.github.io/me.html" class="w3-bar-item w3-button">About Creator</a>
-      </div>
-    </div>
-	  <div class="w3-padding-large w3-hover-red w3-hide-small w3-middle">PHASE 90</div>
-  </div>
-</div>
-
-
-
-   <!-- The sliding Section -->
-<div class="w3-content" style="max-width:2000px;margin-top:40px">
-
-  <!-- Automatic Slideshow Images -->
- 
-  <div class="mySlides w3-display-container3 w3-center">
-      
- 
-       <p class="item-1"><font color="black">Electric vehicle BLDC controller</font>	</p>
-
-
-    <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/Untitled4.JPG?raw=true" style="width:100%;height:700px">
-   
-  </div>
-  
-  </div>
-	      
-	
-	
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:40px">
-
-  <!-- Automatic Slideshow Images -->
- 
-  <div class="mySlides w3-display-container w3-center">
-
- 
-       <p class="item-2"><font color="black">Phase 90 is a BLDC drive series<br>Building the most reliable drives</font></p>
-	
- 
-    <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/Controller%20Back.png?raw=true" style="width:100%;height:700px">
-   
-  </div>
-  
-  </div>
-
-
-
-	 <!-- Automatic Slideshow Images -->
-	
-  <div class="w3-content" style="max-width:2000px;margin-top:55px">
-
-<div class="container3">
-
-  <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/Capturecontroller.PNG?raw=true" style="width:100%;height:100%" id="work">
-	<div class="top-left"><h3><p class="serif"><h1><font color="black" >Introducing 3 PHASE BLDC DRIVER-1</font></h1></p></h3></div>
-  <div class="bottom-left"><h3><font color="black">The first-generation motor controller of the Phase 90 system</font></h3></div>
-
-  </div
-	</div>
-	
-
-<div style="margin-top:65px;color:#ffffff;background-image: url('https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/Controller%20Side.png?raw=true')">	
-  <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px;margin-top:40px" id="about">
-    <h2 class="w3-wide">DC Motors, Induction motors. What's next?</h2>
-    <p class="w3-opacity"><i>Control the next generation</i></p>
-    <p class="w3-justify">The BLDC motors are becoming more powerful because of stronger permanent magnets . Our BLDC motor controller provides the most reliable control over the motor's attitude. It combines efficient circuit design, signal processing and advanced control system 
-     to provide on demand control.</p>
-    <p> The system consists of control and power circuit along with failure protection mechanish which makes it robust.</p>
-   
-  
-  </div>
- <div style="text-align:center"> 
-    <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Presented controller for the first time at Shell</p><p> Eco-marathon, Asia</p>
-        <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/shell.jpg?raw=true" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Use of controller to propel self made </p><p>electric vehicle</p>
-        <img src="https://static.wixstatic.com/media/ac2d1b_96c55a4e2b294717a7cc03640a9fe3f8~mv2.jpg/v1/fill/w_400,h_248,al_c,q_80,usm_0.66_1.00_0.01/ac2d1b_96c55a4e2b294717a7cc03640a9fe3f8~mv2.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Team decided to develop advanced versions of</p><p> commercial controller</p>
-        <img src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/WhatsApp%20Image%202017-11-11%20at%2022.05.46.jpeg?raw=true" alt="Random Name" style="width:60%">
-      </div>
-    </div>
-  </div>
- </div>
- 
-</div>
-  <!-- The Tour Section -->
- 
-	    
-	 <div class="w3-black" id="details">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:1500px;margin-top:40px">
-      <h2 class="w3-wide w3-center">TECHNICAL DETAILS</h2>
-      
-<!--COUNTER-->	    
-	    
-<div style="text-align:center; color:#000000"> 
- <div class="container2">
-  <div class="wrapper">
-    <div class="counter col_fourth">
-      
-      <h2 class="timer count-title count-number" data-to="1000" data-speed="150">Watt</h2>
-       <p class="count-text ">Power(Watt)</p>
-    </div>
-
-    <div class="counter col_fourth">
     
-      <h2 class="timer count-title count-number" data-to="48" data-speed="150">Volts</h2>
-      <p class="count-text ">Operating Voltage(Volt)</p>
-    </div>
 
-    <div class="counter col_fourth">
-   
-      <h2 class="timer count-title count-number" data-to="40" data-speed="150">Amps</h2>
-      <p class="count-text ">Max Current(A)</p>
-    </div>
-
-    <div class="counter col_fourth end">
-   
-      <h2 class="timer count-title count-number" data-to="4000" data-speed="150">Hz</h2>
-      <p class="count-text ">Speed Control Frequency(Hz)</p>
-    </div>
-</div>
-
-<!--COUNTER/-->	 
-	 
-
-      </div>
-</div> 
-<!--
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="/w3images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
---->
-      </div>
-    </div>
-  </div>
-
-  <!-- Ticket Modal -->
-
-
-
-  
-<!-- End Page Content -->
-</div>
-<!-- Add designs -->
-<footer class="w3-container w3-padding-64 w3-center w3-light-grey w3-xlarge" id="design">
-  <h2 class="w3-wide w3-center">DESIGN</h2>
-<div style="text-align:center"> 
- <div class="container">
-  <video id="video1" width="900" autoplay="autoplay" loop>
-    <source src="https://github.com/Samarthjainabout/samarthjainabout.github.io/blob/master/WhatsApp%20Video%202017-11-11%20at%2022.22.06Trim.mp4?raw=true" type="video/mp4">
     
-    Your browser does not support HTML5 video.
-  </video>
 
-    </div> 
-</div> 
- <div style="text-align:center"> 
-	 
- <p>   The challenges of the full-scale motor controller for automotive purpose were considered</p>
-   <p> central to the design philosophy, and a compititive design was made after comparing existing </p>
-   <p> controller in terms of cost to performance ratio to best demostrate the core features of full-scale </p><p>model 
-    like reliable design and heat management.</p>
- </div>
-</footer>
-
- 
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Drop a note</i></p>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Bengaluru, India<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: 7337848169<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: samarth.garuda@gmail.com<br>
-      </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+    <div class="container align-center">
+        <div class="row justify-content-md-center">
+            <div class="mbr-white col-md-10">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">PHASE 90<br></h1>
+                
+                <p class="mbr-text pb-3 mbr-fonts-style display-5">We make bldc and dc motor drives<br><br>The BLDC motors are becoming more powerful because of stronger permanent magnets . Our BLDC motor controller provides reliable control over the motor's attitude. It combines efficient circuit design, signal processing and advanced control system to provide on demand control.
+<br>
+<br><br></p>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-success display-4" href="index.html#slider1-l">Work</a>
+                     <a class="btn btn-md btn-black display-4" href="#bottom">Join us</a> <a class="btn btn-md btn-white display-4" href="index.html#features15-q">About Us</a></div>
             </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
+    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+
+<section class="engine"><a href="https://mobirise.co/b">free site creator</a></section><section class="carousel slide cid-qF73cAMx0U" data-interval="false" id="slider1-l">
+
+    
+
+    <div class="full-screen"><div class="mbr-slider slide carousel" data-pause="true" data-keyboard="false" data-ride="false" data-interval="false"><ol class="carousel-indicators"><li data-app-prevent-settings="" data-target="#slider1-l" data-slide-to="0"></li><li data-app-prevent-settings="" data-target="#slider1-l" class=" active" data-slide-to="1"></li><li data-app-prevent-settings="" data-target="#slider1-l" data-slide-to="2"></li></ol><div class="carousel-inner" role="listbox"><div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/capturecontroller-1890x803.png);"><div class="container container-slide"><div class="image_wrapper"><div class="mbr-overlay" style="opacity: 0.2;"></div><img src="assets/images/capturecontroller-1890x803.png"><div class="carousel-caption justify-content-center"><div class="col-10 align-center"><h2 class="mbr-fonts-style display-1">Introducing 3 Phase BLDC Drive &gt;1</h2><p class="lead mbr-text mbr-fonts-style display-5">The first generation motor controller of the Phase 90 system</p><div class="mbr-section-btn" buttons="0"> <a class="btn  btn-white-outline display-4" href="page1.html">Design Details</a></div></div></div></div></div></div><div class="carousel-item slider-fullscreen-image active" data-bg-video-slide="false" style="background-image: url(assets/images/controller-front-1-2000x1545.jpg);"><div class="container container-slide"><div class="image_wrapper"><div class="mbr-overlay" style="opacity: 0;"></div><img src="assets/images/controller-front-1-2000x1545.jpg"><div class="carousel-caption justify-content-center"><div class="col-10 align-left"><h2 class="mbr-fonts-style display-1">Management</h2><p class="lead mbr-text mbr-fonts-style display-5">To keep under control, temperature,voltage and current are measured and monitored for alerts.</p></div></div></div></div></div><div class="carousel-item slider-fullscreen-image" data-bg-video-slide="false" style="background-image: url(assets/images/controller-top-1-2000x1125.png);"><div class="container container-slide"><div class="image_wrapper"><div class="mbr-overlay" style="opacity: 0.1;"></div><img src="assets/images/controller-top-1-2000x1125.png"><div class="carousel-caption justify-content-center"><div class="col-10 align-right"><h2 class="mbr-fonts-style display-1">REDUCED EMI&nbsp;</h2><p class="lead mbr-text mbr-fonts-style display-5">The controller while design phase has been many times tested for reduced electromegnetic interferences</p></div></div></div></div></div></div><a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#slider1-l"><span aria-hidden="true" class="mbri-left mbr-iconfont"></span><span class="sr-only">Previous</span></a><a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next" href="#slider1-l"><span aria-hidden="true" class="mbri-right mbr-iconfont"></span><span class="sr-only">Next</span></a></div></div>
+
+</section>
+
+<section class="features15 cid-qF7sARZ2B9" id="features15-q">
+
+    
+
+    
+    <div class="container">
+        <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">How we came up the idea</h2>
+        <h3 class="mbr-section-subtitle display-5 align-center mbr-fonts-style">We started as a student team, making motor drives for electric vehicles</h3>
+
+        <div class="media-container-row container pt-5 mt-2">
+
+            <div class="col-12 col-md-6 mb-4 col-lg-4">
+                <div class="card flip-card p-5 align-center">
+                    <div class="card-front card_cont">
+                        <img src="assets/images/shell-2-1500x1007.jpg" alt="Mobirise" title="">
+                    </div>
+                    <div class="card_back card_cont">
+                        <h4 class="card-title display-5 py-2 mbr-fonts-style">1st time international presentation</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            We presented our bldc controller design at shell eco marathon in 2016, held at Singapore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-4 col-lg-4">
+                
+                <div class="card flip-card p-5 align-center">
+                    <div class="card-front card_cont">
+                        <img src="assets/images/ac2d1b-96c55a4e2b294717a7cc03640a9fe3f8-mv2-1-400x248.jpg" alt="Mobirise" title="">
+                    </div>
+                    <div class="card_back card_cont">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">Road worthy</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">The controller used to propel self made 2 seater electric vehicle.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 mb-4 col-lg-4">
+                <div class="card flip-card p-5 align-center">
+                    <div class="card-front card_cont">
+                        <img src="assets/images/whatsapp-image-2017-11-11-at-22.05.46-1280x720.jpg" alt="Mobirise" title="">
+                    </div>
+                    <div class="card_back card_cont">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">Phase 90 began</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            Team decided to manufacture more advanced version of controller by building each component from scratch.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
+            
+        </div>
+</div></section>
+
+<section class="mbr-section info2 cid-qF7redbCu5" id="info2-o">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row main justify-content-center">
+            <div class="media-container-column col-12 col-lg-3 col-md-4">
+                
+            </div>
+            <div class="media-container-column title col-12 col-lg-7 col-md-6">
+                <h2 class="align-right mbr-bold mbr-white pb-3 mbr-fonts-style display-2"></h2>
+                <h3 class="mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style display-5">Feel free to contact us <br>email: samarth.garuda@gmail.com<br>LOCATION: Bengaluru, India</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium"> <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p>
-</footer>
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-<!--for counter-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-(function ($) {
-	$.fn.countTo = function (options) {
-		options = options || {};
-		
-		return $(this).each(function () {
-			// set options for current element
-			var settings = $.extend({}, $.fn.countTo.defaults, {
-				from:            $(this).data('from'),
-				to:              $(this).data('to'),
-				speed:           $(this).data('speed'),
-				refreshInterval: $(this).data('refresh-interval'),
-				decimals:        $(this).data('decimals')
-			}, options);
-			
-			// how many times to update the value, and how much to increment the value on each update
-			var loops = Math.ceil(settings.speed / settings.refreshInterval),
-				increment = (settings.to - settings.from) / loops;
-			
-			// references & variables that will change with each update
-			var self = this,
-				$self = $(this),
-				loopCount = 0,
-				value = settings.from,
-				data = $self.data('countTo') || {};
-			
-			$self.data('countTo', data);
-			
-			// if an existing interval can be found, clear it first
-			if (data.interval) {
-				clearInterval(data.interval);
-			}
-			data.interval = setInterval(updateTimer, settings.refreshInterval);
-			
-			// initialize the element with the starting value
-			render(value);
-			
-			function updateTimer() {
-				value += increment;
-				loopCount++;
-				
-				render(value);
-				
-				if (typeof(settings.onUpdate) == 'function') {
-					settings.onUpdate.call(self, value);
-				}
-				
-				if (loopCount >= loops) {
-					// remove the interval
-					$self.removeData('countTo');
-					clearInterval(data.interval);
-					value = settings.to;
-					
-					if (typeof(settings.onComplete) == 'function') {
-						settings.onComplete.call(self, value);
-					}
-				}
-			}
-			
-			function render(value) {
-				var formattedValue = settings.formatter.call(self, value, settings);
-				$self.html(formattedValue);
-			}
-		});
-	};
-	
-	$.fn.countTo.defaults = {
-		from: 0,               // the number the element should start at
-		to: 0,                 // the number the element should end at
-		speed: 1000,           // how long it should take to count between the target numbers
-		refreshInterval: 100,  // how often the element should be updated
-		decimals: 0,           // the number of decimal places to show
-		formatter: formatter,  // handler for formatting the value before rendering
-		onUpdate: null,        // callback method for every time the element is updated
-		onComplete: null       // callback method for when the element finishes updating
-	};
-	
-	function formatter(value, settings) {
-		return value.toFixed(settings.decimals);
-	}
-}(jQuery));
-
-jQuery(function ($) {
-  // custom formatting example
-  $('#count-number').data('countToOptions', {
-	formatter: function (value, options) {
-	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-	}
-  });
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/mbr-flip-card/mbr-flip-card.js"></script>
+  <script src="assets/vimeoplayer/jquery.mb.vimeo_player.js"></script>
+  <script src="assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js"></script>
+  <script src="assets/ytplayer/jquery.mb.ytplayer.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/slidervideo/script.js"></script>
   
-  // start all the timers
-  $('.timer').each(count);  
   
-  function count(options) {
-	var $this = $(this);
-	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-	$this.countTo(options);
-  }
-});	
-	
-</script>
 </body>
 </html>
