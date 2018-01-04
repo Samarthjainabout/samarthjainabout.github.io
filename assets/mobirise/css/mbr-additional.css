@@ -1789,6 +1789,64 @@ body {
     text-align: center;
   }
 }
+.cid-qFJq33Yav5 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #ffffff;
+}
+.cid-qFJq33Yav5 .mbr-section-subtitle {
+  color: #767676;
+  font-weight: 300;
+}
+.cid-qFJq33Yav5 .mbr-content-text {
+  color: #767676;
+}
+.cid-qFJq33Yav5 .card {
+  word-wrap: break-word;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+}
+.cid-qFJq33Yav5 .mbr-iconfont {
+  font-size: 80px;
+  color: #149dcc;
+}
+.cid-qFJq33Yav5 .cards-container {
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  word-break: break-word;
+}
+.cid-qFJq33Yav5 .media-block {
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  padding-left: 2rem;
+}
+.cid-qFJq33Yav5 .cards-block {
+  flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+}
+.cid-qFJq33Yav5 .card-img {
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .cid-qFJq33Yav5 .media-block {
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+    padding-left: 0;
+    padding-bottom: 2rem;
+  }
+}
+.cid-qFJq33Yav5 .mbr-content-text B {
+  color: #232323;
+}
 .cid-qFHh21MdDH {
   background: #ffffff;
 }
@@ -1818,7 +1876,7 @@ body {
 .cid-qFHjhZ6mkY {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-image: url("../../../assets/images/powermosfet-349x318.png");
+  background-color: #b2ccd2;
 }
 .cid-qFHjhZ6mkY .mbr-figure {
   margin: 0 auto;
