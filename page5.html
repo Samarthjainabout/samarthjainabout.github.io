@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.5.4, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.5.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+  <meta name="description" content="Web Site Generator Description">
+  <title>MVD</title>
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+<section class="header3 cid-qGYZ4FsvbP" id="header3-1r">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/us20130286704a1-20131031-d00000-2132x2767.png" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
+                    INVERTER TOPOLOGY[1]</h1>
+                
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-7"><br>Motor drives and other power conversion systems typically receive AC input power and convert that to an internal DC for subsequent conversion to AC output power for driving a motor or other load. Multilevel inverters are sometimes used in motor drives to generate and provide high voltage drive signals to the motor in high power applications. One form of multilevel inverter is a Cascaded H-Bridge (CHB) inverter architecture, which employs multiple series-connected H-Bridge inverters for driving each motor winding phase. Each H-Bridge is powered by a separate DC source and is driven by switch signals to generate positive or negative output voltage, with the series combination of multiple H-Bridge stages providing multilevel inverter output capability for driving a load. Various modulation techniques can be used for generating the CHB switching signals, such as phase shift pulse width modulation (PS PWM) and level shift pulse width modulation (LS PWM). In any power conversion system, reducing Total Harmonic Distortion (THD) is an important design goal. Accordingly, level shift PWM is commonly used for generating the CHB switching signals in multilevel voltage source medium voltage inverters for motor drive applications, as this provides better output line-line voltage THD than phase shifted PWM, and does not generate certain additional dv/dt problems associated with PS PWM. However, LS PWM has certain shortcomings for high power converters due to uneven power distribution, and this technique can lead to increased input current harmonics. In particular, individual input rectifiers are loaded unevenly, especially at lower output modulation indices, where device switching frequency is not equal to carrier frequency and is not the same for all switches. Accordingly, a need remains for improved carrier-based pulse width modulation techniques and multilevel inverters for driving motors and other loads.</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="engine"><a href="https://mobirise.co/n">bootstrap modal form</a></section><section class="cid-qH035nB7bi" id="image1-1y">
+
+    
+
+    <figure class="mbr-figure container">
+            <div class="image-block" style="width: 66%;">
+                <img src="assets/images/system-overview-756x831.png" width="1400" alt="Mobirise" title="">
+                
+            </div>
+    </figure>
+</section>
+
+<section class="header4 cid-qGZ8xlEVBx mbr-fullscreen" id="header4-1t">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="media-content col-md-10">
+                <h1 class="mbr-section-title align-center mbr-white pb-3 mbr-bold mbr-fonts-style display-1">Overview of system</h1>
+                
+                <div class="mbr-text align-center mbr-white pb-3">
+                    <p class="mbr-text mbr-fonts-style display-7"><br>&nbsp;<br>The main FPGA has the following roles:
+<br>- Monitor unit voltages
+<br>- Monitor leg section currents
+<br>- Handle the gates signals&nbsp;<br>- Modulation control and selection
+<br>- Mathematical operations based on lookup tables stored in a FLASH memory
+<br>- Connect the entire logic blocks together
+<br>- Provide an interface with the user system
+<br><br>The secondary FPGA has the following roles:
+<br>- Control the contactors/relays
+<br>- Communicate with the analog comparators
+<br>- Monitor the contactors
+<br>- Handling the user input interface
+<br>- Protections
+<br>- Handle the fault signals and act accordingly
+<br>- Provide an interface with the user system&nbsp;<br><br>The DSP has only one role which is to control the motor as a load and to provide a
+<br>simple platform on which the control of the inverter can be implemented without the need to
+<br>program the FPGAs or any other logic system. The DSP can be considered the main control item
+<br>for the entire system even if the main FPGA is responsible will all the management of the
+<br>inverter well functionality. Therefore the DSP tasks are:
+<br>- Read the output voltage
+<br>- Read the output currents
+<br>- Read the DC voltage
+<br>- Read the motor encoder
+<br>- Motor control
+<br>&nbsp;<br></p>
+                </div>
+                
+            </div>
+            <div class="mbr-figure pt-5">
+                <img src="assets/images/system-overview-756x831.png" alt="Mobirise" title="" style="width: 60%;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content12 cid-qGZAIF3D2j" id="content12-1x">
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-7">
+                <ul>
+                    <li><strong>Basic overview</strong> - The inverter contains a set of IGBT units, H bridges. 
+The units are connected in series. A unit contains a set of capacitors &nbsp;which is measured by a voltage sensor placed on each unit. The value read from the voltage &nbsp;sensor is passed to the ADC module than to the FPGA. For this application the MVDC have been &nbsp;replaced with a LVDC (900 VDC from a 690 VAC line).</li>
+                    <li><strong>DC circuit</strong>- The DC Chopper is used for protection purposes in order to reduce the DC bus voltage in 
+case of overvoltage protection and to assure that the DC bus voltage will remain constant . 
+The DC Bus and the rectifier have the role to create a stable DC voltage. The difference 
+between this rectifier and a normal one is represented by extra care considered for overvoltage. 
+The overvoltage mentioned earlier for both the rectifier and the DC chopper was taken 
+into consideration because, in case of fault, the inverter unit capacitors may get connected in
+series and will discharge in the DC bus. This is not a desired event but with the probability that it 
+can happen the consideration to design the power supply to withstand the overvoltage .&nbsp;</li>
+                    <li><strong>Fault control</strong>- The ADCs connected with the FPGA is responsible for measuring the unit voltages as wellas the currents from the leg sections. The ADC connected with the DSP is responsible withacquiring the output and DC currents and voltages. These parameters are required for the motorcontrol, while the ones acquired by the FPGA are used for the modulation and systemmonitoring. The value is preset during testing to the actual parameters tolerated bythe system. The signal from them is passed to the comparators CPLD which will generate a fault 
+signal and will send the data to the secondary FPGA in order to determine the fault source.&nbsp;</li><li><strong>Contactors and relays monitoring</strong>- 
+The contactors are used to control the power flow for the power supply, inverter and 
+load. These are required for protections purposes as well as for better control the capacitor 
+<span style="font-size: 1rem;">charge or discharge. The contactors are controlled by small relays which in turn are controlled by 
+a microcontroller.
+The relays used in the application controls the power supply of the units because, the 
+units must be power consequently due to the large inrush current absorbed by the internal 
+switched mode power supply of each unit. Due to this, the units are powered in groups  with 
+2-3 seconds in between. 
+The input microcontroller is used to monitor the large contactors for their states in order 
+to determine is a contractor is closed or opened due to external interaction. One role of this is to 
+determine when the over-voltage protection is turned on by checking the chopper contactors 
+and/or the main contactor. The chopper contactor can be controller either by the FPGA or by 
+external logic. 
+The output microcontroller is used to control the main relays and also to provide a code for automatic system connection. The microcontroller can work in two ways, independent 
+(during automatic power-up or power-down) or controlled by the FPGA.&nbsp;</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+</body>
+</html>
