@@ -2145,6 +2145,33 @@ body {
 .cid-qFVYCW37WC DIV {
   text-align: left;
 }
+.cid-qInnjKhCcL {
+  background: #ffffff;
+}
+.cid-qInnjKhCcL .image-block {
+  margin: auto;
+  width: 100% !important;
+}
+.cid-qInnjKhCcL .mbr-figure {
+  margin: 0 auto;
+}
+.cid-qInnjKhCcL figcaption {
+  position: relative;
+}
+.cid-qInnjKhCcL figcaption div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .cid-qInnjKhCcL .image-block {
+    width: 100% !important;
+  }
+}
+.cid-qInnjKhCcL DIV {
+  color: #232323;
+  text-align: center;
+}
 .cid-qGYZ4FsvbP {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -2244,4 +2271,84 @@ body {
   height: 25px;
   border-radius: 50%;
   content: '✓';
+}
+.cid-qInDz9Qs8M {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url("../../../assets/images/mbr-1620x1080.jpg");
+}
+.cid-qInDz9Qs8M .mbr-figure {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cid-qInDz9Qs8M .mbr-figure img {
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .cid-qInDz9Qs8M .mbr-figure img {
+    width: 100% !important;
+  }
+}
+.cid-qIoaDy45Kb {
+  background: linear-gradient(45deg, #7fd9fc, #6576aa);
+}
+.cid-qIoa9PHAJz {
+  background: #ffffff;
+}
+.cid-qIoa9PHAJz .image-block {
+  margin: auto;
+  width: 100% !important;
+}
+.cid-qIoa9PHAJz .mbr-figure {
+  margin: 0 auto;
+}
+.cid-qIoa9PHAJz figcaption {
+  position: relative;
+}
+.cid-qIoa9PHAJz figcaption div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .cid-qIoa9PHAJz .image-block {
+    width: 100% !important;
+  }
+}
+.cid-qIokJbENH7 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #f9f9f9;
+}
+.cid-qIokJbENH7 h4 {
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: left;
+}
+.cid-qIokJbENH7 p {
+  color: #767676;
+  text-align: left;
+}
+.cid-qIokJbENH7 .card-box {
+  padding-top: 2rem;
+}
+.cid-qIokJbENH7 .card-wrapper {
+  height: 100%;
+}
+.cid-qIqscHwHKT {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: linear-gradient(45deg, #f4a997, #a09fc0);
+}
+@media (min-width: 992px) {
+  .cid-qIqscHwHKT .mbr-figure {
+    padding-left: 4rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-qIqscHwHKT .mbr-figure {
+    padding-top: 3rem;
+  }
 }
