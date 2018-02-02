@@ -2317,6 +2317,46 @@ body {
     width: 100% !important;
   }
 }
+.cid-qIucNyCIIY {
+  background-color: #9d88a9;
+}
+.cid-qIucNyCIIY .media-content {
+  word-wrap: break-word;
+}
+.cid-qIucNyCIIY .form-inline {
+  display: block;
+}
+.cid-qIucNyCIIY .form-inline .form-group {
+  padding: 0.5rem;
+  display: inline-block;
+}
+.cid-qIucNyCIIY .form-inline .buttons-wrap {
+  display: inline-block;
+}
+.cid-qIucNyCIIY .form-inline input {
+  text-align: center;
+}
+.cid-qIucNyCIIY .mbr-figure {
+  padding-bottom: 2rem;
+}
+@media (min-width: 992px) {
+  .cid-qIucNyCIIY .mbr-figure {
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 992px) {
+  .cid-qIucNyCIIY .mbr-text {
+    text-align: center;
+  }
+  .cid-qIucNyCIIY .form-inline {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .cid-qIucNyCIIY .form-inline input {
+    font-size: .85rem;
+  }
+}
 .cid-qIokJbENH7 {
   padding-top: 90px;
   padding-bottom: 90px;
